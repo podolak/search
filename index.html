@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0044)http://www.lexilogos.com/keyboard/hebrew.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Search Talmud</title>
+
+<style type="text/css">
+@font-face { font-family:'Ezra SIL'; src:url(http://www.lexilogos.com/clavier/SILEOT.ttf); } 
+@font-face { font-family:Motek; src:url(http://www.lexilogos.com/clavier/motek.ttf); } 
+.bt, .bt:hover, .bt:visited {text-decoration:none; cursor:pointer; width:24pt; font-size:20pt; color:#CC0033; font-family:Times New Roman, Ezra SIL, Arial; }
+.heb {font-family:Times New Roman, Ezra SIL, Arial; font-size:150%; color:#0000FF; }
+.cadr {font-family:Times New Roman, Ezra SIL, Arial; color:blue; font-size:24pt; width:80%; padding:5px; scrollbar-base-color:transparent; scrollbar-track-color:transparent; }
+.bf, .bf:hover, .bf:visited {cursor:pointer; font-size:9pt; color:#666666; }
+</style>
+
+<link href="./talmud_search/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./talmud_search/base.js.download"></script>
+<script type="text/javascript" src="./talmud_search/carhe.js.download"></script>
+<script type="text/javascript" src="./talmud_search/clipboard.js.download"></script>
+</head>
+<body onload="conversion.saisie.focus()">
+
+<div align="center"> 
+
+<br>
+<form name="conversion">
+<textarea name="saisie" id="bar" onkeyup="transcrire()" dir="rtl" rows="4" class="cadr"></textarea>
+<br>
+<br>
+</form>
+<script>
+var clipboard = new Clipboard('.bf');
+clipboard.on('success', function(e) {
+console.log(e); 
+});
+clipboard.on('error', function(e) {
+console.log(e);
+});
+
+function search()
+{   
+   location.href = "https://www.google.com/search?q=site%3Ahttp%3A%2F%2Fhttp://www.hebrewbooks.org/shas.aspx "+"\""+conversion.saisie.value+"\"";
+}
+
+</script>
+
+<p id="demo"></p>
+
+<table>
+<tr align="center"> 
+<td></td>
+<td><input type="button" class="bt" title="lamed" onclick="alpha(&#39;ל&#39;)" value="ל"></td>
+<td><input type="button" class="bt" title="khafs" onclick="alpha(&#39;ך&#39;)" value="ך"></td>
+<td><input type="button" class="bt" title="khaf" onclick="alpha(&#39;כ&#39;)" value="כ"></td>
+<td><input type="button" class="bt" title="yôd" onclick="alpha(&#39;י&#39;)" value="י"></td>
+<td><input type="button" class="bt" title="têt" onclick="alpha(&#39;ט&#39;)" value="ט"></td>
+<td><input type="button" class="bt" title="hêt" onclick="alpha(&#39;ח&#39;)" value="ח"></td>
+<td><input type="button" class="bt" title="zaîn" onclick="alpha(&#39;ז&#39;)" value="ז"></td>
+<td><input type="button" class="bt" title="wâw" onclick="alpha(&#39;ו&#39;)" value="ו"></td>
+<td><input type="button" class="bt" title="he" onclick="alpha(&#39;ה&#39;)" value="ה"></td>
+<td><input type="button" class="bt" title="dàlet" onclick="alpha(&#39;ד&#39;)" value="ד"></td>
+<td><input type="button" class="bt" title="gîmel" onclick="alpha(&#39;ג&#39;)" value="ג"></td>
+<td><input type="button" class="bt" title="vet" onclick="alpha(&#39;ב&#39;)" value="ב"></td>
+<td><input type="button" class="bt" title="âlef" onclick="alpha(&#39;א&#39;)" value="א"></td>
+</tr>
+
+<tr align="center"> 
+<td><input type="button" class="bt" title="tâw" onclick="alpha(&#39;ת&#39;)" value="ת"></td>
+<td><input type="button" class="bt" title="sîn" onclick="alpha(&#39;ש&#39;)" value="ש"></td>
+<td><input type="button" class="bt" title="rêsh" onclick="alpha(&#39;ר&#39;)" value="ר"></td>
+<td><input type="button" class="bt" title="qôf" onclick="alpha(&#39;ק&#39;)" value="ק"></td>
+<td><input type="button" class="bt" title="sâdês" onclick="alpha(&#39;ץ&#39;)" value="ץ"></td>
+<td><input type="button" class="bt" title="sâdê" onclick="alpha(&#39;צ&#39;)" value="צ"></td>
+<td><input type="button" class="bt" title="fes" onclick="alpha(&#39;ף&#39;)" value="ף"></td>
+<td><input type="button" class="bt" title="fe" onclick="alpha(&#39;פ&#39;)" value="פ"></td>
+<td><input type="button" class="bt" title="`ayn" onclick="alpha(&#39;ע&#39;)" value="ע"></td>
+<td><input type="button" class="bt" title="sâmek" onclick="alpha(&#39;ס&#39;)" value="ס"></td>
+<td><input type="button" class="bt" title="nûns" onclick="alpha(&#39;ן&#39;)" value="ן"></td>
+<td><input type="button" class="bt" title="nûn" onclick="alpha(&#39;נ&#39;)" value="נ"></td>
+<td><input type="button" class="bt" title="mêms" onclick="alpha(&#39;ם&#39;)" value="ם"></td>
+<td><input type="button" class="bt" title="mêm" onclick="alpha(&#39;מ&#39;)" value="מ"></td>
+
+</tr>
+
+</tbody></table>
+<br>
+<input type="button" onclick="search()" class="bf" value="search">  
+<br>
+<br>
+
+
+</body></html>
