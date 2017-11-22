@@ -34,12 +34,15 @@ console.log(e);
 clipboard.on('error', function(e) {
 console.log(e);
 });
-
-function search()
+function search1()
 {   
    location.href = 'https://www.sefaria.org/search?q="'+conversion.saisie.value+'"&filters=Talmud&var=0';
 }
 
+function search2()
+{   
+   location.href = 'https://www.sefaria.org/search?q="'+conversion.saisie.value+'"&filters=Tanach&var=0';
+}
 </script>
 
 <p id="demo"></p>
@@ -82,7 +85,8 @@ function search()
 
 </tbody></table>
 <br>
-<input type="button" onclick="search()" class="bf" value="search">  
+<input type="button" onclick="search1()" class="bf" value="Talmud">  
+<input type="button" onclick="search2()" class="bf" value="Tanach">  
 <br>
 <br>
 
